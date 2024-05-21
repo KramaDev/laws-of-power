@@ -1,0 +1,25 @@
+:root {
+  --color-black: #262626;
+  --color-white: #f1f2f6;
+  --color-red: #c80014;
+  --color-blue: #18467d;
+
+  --border-round: 1rem;
+  --border-circle: 1600rem;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-white);
+}
+
+//IMPORTS
+//COMPONENTS A-Z
+@import "./components/header.scss";
+@import "./components/hero.scss";
+@import "./components/layout.scss";
