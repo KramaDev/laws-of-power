@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { lawData } from "../data/data";
 
 const getRandomIndex = (lawData: string | any[]) => {
@@ -6,7 +7,12 @@ const getRandomIndex = (lawData: string | any[]) => {
 };
 
 const Hero = () => {
-  const randomIndex = getRandomIndex(lawData);
+  const [quoteIndex, setQuoteIndex] = useState(getRandomIndex(lawData));
+
+  const handleNewQuote = () => {
+    setQuoteIndex(getRandomIndex(lawData));
+  };
+
   return (
     <>
       <article className="hero">
@@ -17,8 +23,11 @@ const Hero = () => {
         />
 
         <section className="section">
-          <h2 className="section__title">{lawData[randomIndex].law}</h2>
-          <p className="section__desc">{lawData[randomIndex].desc}</p>
+          <h2 className="section__title">{lawData[quoteIndex].law}</h2>
+          <p className="section__desc">{lawData[quoteIndex].desc}</p>
+          <button onClick={handleNewQuote} className="section__btn">
+            Get New Quote
+          </button>
         </section>
       </article>
       <p className="tag">
@@ -42,4 +51,5 @@ const Hero = () => {
     </>
   );
 };
+
 export default Hero;
