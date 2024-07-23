@@ -43,7 +43,7 @@ const Hero = () => {
         <span>
           <img
             className="tag__img"
-            src="https://media.licdn.com/dms/image/D4D03AQF18y1YsyIbxA/profile-displayphoto-shrink_800_800/0/1669145631958?e=1720656000&v=beta&t=5NafQkdu1rp6YNcUNZyaPCQUOtE6VVguyvPDb8dK5Q8"
+            src="https://images.pexels.com/users/avatars/1069630016/dj-marac-550.jpeg?auto=compress&fit=crop&h=130&w=130&dpr=1"
             alt="KramaDev photo"
           />
         </span>
